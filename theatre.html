@@ -202,9 +202,10 @@ body {
         <div class="flex-row">
           <div class="flex-item flex-column">
             <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">All</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Lighting</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Sound</button>
+  <button class="tablinks" onclick="openCity(event, 'setprops')">Set/Props</button>
 </div>
 
 <div id="London" class="tabcontent">
@@ -236,6 +237,8 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 </script>
             <h2>Featured Work</h2>
             <hr>
