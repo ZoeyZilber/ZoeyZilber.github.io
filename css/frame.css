@@ -88,7 +88,7 @@ hr {
   z-index: 2;
   position: relative;
   width: 100%;
-  background-color: #333333;
+  background-color: #758694;
   min-width: 300px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -112,8 +112,7 @@ hr {
 }
 
 .menu .menu-highlight {
-  color: rgb(255, 255, 255) !important;
-  opacity: 1 !important;
+  color: #405D72 !important;
   font-weight: 700 !important;
 }
 
