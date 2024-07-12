@@ -290,7 +290,7 @@ hr {
   font-weight: 300;
   line-height: 1.5;
   overflow-x: auto;
-  background-color: #333333;
+  background-color: #405D72;
   display: flex;
 }
 
@@ -302,7 +302,7 @@ hr {
 }
 
 .banner .banner-table a {
-  color: #333333;
+  color: #405D72;
   text-decoration: none;
 }
 
