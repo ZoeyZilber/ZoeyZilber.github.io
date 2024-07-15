@@ -26,6 +26,16 @@
 <body>
   <div class="menu-container"></div>
   <div class="content-container">
+    <div class = "content">
+            <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'All')" id="defaultOpen">All</button>
+  <button class="tablinks" onclick="openTab(event, 'Lighting')">Lighting</button>
+  <button class="tablinks" onclick="openTab(event, 'Sound')">Sound</button>
+  <button class="tablinks" onclick="openTab(event, 'setprops')">Set/Props</button>
+</div>
+      
+  <div id="Featured" class="tabcontent">
+  <div class="content-container">
     <div class="content">
       <div class="content-table flex-column">
         <div class="flex-row">
@@ -66,8 +76,35 @@
               Assembly of robot to compete in FTC. Responsible for all CAD design and 3D printing.
             </p>
           </div>
-        </div>
-      </div>
+        <div id="Lighting" class="tabcontent">
+  <h3>Lighting</h3>
+  <p>Lighting is the capital of France.</p> 
+</div>
+          <div id="Lighting" class="tabcontent">
+  <h3>Lighting</h3>
+  <p>Lighting is the capital of France.</p> 
+</div>
+          <div id="Lighting" class="tabcontent">
+  <h3>Lighting</h3>
+  <p>Lighting is the capital of France.</p> 
+</div>
+          <script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
     </div>
   </div>
   <div class="footer-container"></div>
