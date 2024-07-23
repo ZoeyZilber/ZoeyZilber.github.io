@@ -1506,7 +1506,7 @@ ol.nested>li:before {
     margin-bottom: 20px;
     margin-right: 0;
   }
-
+}
 
 @media screen and (min-width: 900px) {
   .masonry {
@@ -1570,4 +1570,18 @@ ol.nested>li:before {
     flex: 1 0 100%;
     max-width: 100%;
   }
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+        color: black;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: black;
+        color: white;
+    }
 }
