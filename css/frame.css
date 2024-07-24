@@ -1581,7 +1581,7 @@ ol.nested>li:before {
 
 @media (prefers-color-scheme: dark) {
     body {
-        background-color: black;
+        background-color: #121212;
         color: white;
     }
 }
