@@ -1601,4 +1601,7 @@ ol.nested>li:before {
   color: #9f9f9f;
 
   }
+  content{
+    background-color: #121212;
+  }
 }
