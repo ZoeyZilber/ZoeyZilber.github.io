@@ -1586,7 +1586,7 @@ ol.nested>li:before {
     }
   h1 {
   font-size: 30px;
-  color: #9f9f9f;
+  color: #c5c5c5;
   margin: 30px 0 0 0;
   padding: 0;
   font-weight: bold;
@@ -1594,11 +1594,11 @@ ol.nested>li:before {
   }
 
   h2 {
-  color: #9f9f9f;
+  color: #c5c5c5;
   }
 
   h3 {
-  color: #9f9f9f;
+  color: #c5c5c5;
 
   }
   content{
