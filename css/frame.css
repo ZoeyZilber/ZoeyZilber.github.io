@@ -1601,11 +1601,8 @@ ol.nested>li:before {
   color: #c5c5c5;
 
   }
-  .tabcontent {
-    display: none;
-    padding: 6px 6px 12px;
-    border: 1px solid #121212;
-    border-top: none;
-}
-  
+  .content {
+    background-color: #121212;
+    position: relative;
+  } 
 }
