@@ -1605,4 +1605,8 @@ ol.nested>li:before {
     background-color: #121212;
     position: relative;
   } 
+  .highlight-text {
+    font-weight: bold;
+    color: lightblue;
+}
 }
