@@ -1606,7 +1606,6 @@ ol.nested>li:before {
     position: relative;
   } 
   .highlight-text {
-    font-weight: bold;
     color: lightblue;
 }
 }
