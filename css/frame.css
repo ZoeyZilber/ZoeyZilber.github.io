@@ -1585,12 +1585,7 @@ ol.nested>li:before {
         color: white;
     }
   h1 {
-  font-size: 30px;
   color: #c5c5c5;
-  margin: 30px 0 0 0;
-  padding: 0;
-  font-weight: bold;
-  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   }
 
   h2 {
@@ -1603,8 +1598,10 @@ ol.nested>li:before {
   }
   .content {
     background-color: #121212;
-    position: relative;
   } 
+  .tabcontent {
+    background-color: #121212;
+  }
   .highlight-text {
     color: lightblue;
 }
