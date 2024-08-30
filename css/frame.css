@@ -1596,13 +1596,13 @@ ol.nested>li:before {
   color: #c5c5c5;
 
   }
-  .content {
-    background-color: #121212;
+  container {
+    background-color: black;
   } 
   .tabcontent {
     background-color: #121212;
   }
-  .highlight-text {
+  highlight-text {
     color: lightblue;
 }
 }
