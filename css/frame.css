@@ -67,16 +67,6 @@ h3 {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-ul,
-ol {
-  margin: 10px 0 10px 0;
-}
-
-li ol,
-li ul {
-  margin: 0;
-}
-
 hr {
   border: 0;
   height: 1px;
@@ -1577,6 +1567,12 @@ ol.nested>li:before {
         background-color: white;
         color: black;
     }
+  container {
+    background-color: white;  
+  }
+  content {
+    background-color: white;  
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1599,7 +1595,10 @@ ol.nested>li:before {
   container {
     background-color: black;
   } 
-  .tabcontent {
+  content {
+    background-color: black;  
+  }
+  tabcontent {
     background-color: #121212;
   }
   highlight-text {
