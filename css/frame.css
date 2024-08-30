@@ -1567,12 +1567,6 @@ ol.nested>li:before {
         background-color: white;
         color: black;
     }
-  container {
-    background-color: white;  
-  }
-  content {
-    background-color: white;  
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -1591,15 +1585,6 @@ ol.nested>li:before {
   h3 {
   color: #c5c5c5;
 
-  }
-  container {
-    background-color: black;
-  } 
-  content {
-    background-color: black;  
-  }
-  tabcontent {
-    background-color: #121212;
   }
   highlight-text {
     color: lightblue;
