@@ -1586,7 +1586,7 @@ ol.nested>li:before {
   color: #c5c5c5;
 
   }
-  highlight-text {
+  .highlight-text {
     color: lightblue;
 }
 }
