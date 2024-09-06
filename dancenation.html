@@ -21,6 +21,7 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+    .mySlides {display:none;}
   </style>
 </head>
 
@@ -40,7 +41,6 @@
     <p id="caption"></p>
   </div>
  <div class="flex-row">
-        <div class="gallery add-top-margin-small add-bottom-margin-small">
           <a href="javascript:void(0)" class="flex-column"><img src="images/theatre/dancenation/DFP_0011.JPG>
             <p>df</p>
           </a>
@@ -189,48 +189,32 @@
             <div>Image Caption</div>
           </a          
         </div>
-
-       
-  <!-- Thumbnail images -->
-  <div class="row">
-    <div class="column">
-      <img class="demo cursor" src="images/theatre/dancenation/DFP_0011.JPG" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0036.JPG" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0228.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0429.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0574.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0609.JPG" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0707.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0726.JPG" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_0939.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src="images/DFP_1054.JPG" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
-    </div>
-    </div>
-</div>
-          </div>
+<button class="slide-button display-left" onclick="plusDivs(-1)">&#10094;</button>
+<button class="slide-button display-right" onclick="plusDivs(+1)">&#10095;</button>
+  
         </div>
       </div>
     </div>
   </div>
   <div class="footer-container"></div>
-</body>
+     <script>
+    var slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+  </script>
+</body>
 </html>
