@@ -22,15 +22,19 @@
       font-weight: 700 !important;
     }
     @media (prefers-color-scheme: light) {
-      .github-link{
-        background-image: url("/images/logos/github-mark.png");
-        width="100";
+      .lightmode{
+        display: block;
+      }
+      .darkmode{
+        diplay: none;
       }
     }
     @media (prefers-color-scheme: dark) {
-      .github-link{
-        background-image: url("/images/logos/github-mark-white.png");
-        width="100";
+      .darkmode{
+        diplay: block;
+      }
+      .lightmode{
+        display: none;
       }
     }
   </style>
@@ -52,7 +56,10 @@
               <a href="https://www.linkedin.com/in/zoey-zilber-127766207" target="_blank"><img width ="400" border="0" margin="50px" align="center" src="/images/logos/LI-Logo.png"/></a>
               <a href="https://www.facebook.com/profile.php?id=100070591150103" target="_blank"><img width ="100" border="0" margin="50px" align="center" src="/images/logos/Facebook_Logo_Secondary.png"/></a>
               <a href="https://www.instagram.com/zoeyzilber/" target="_blank"><img width ="100" border="0" margin="50px" align="center" src="/images/logos/512px-Instagram_icon.png"/></a>
-              <a class="github-link" href="https://github.com/ZoeyZilber" target="_blank"><img border="0" margin="50px" align="center"/></a>
+              <a href="https://github.com/ZoeyZilber" target="_blank">
+                <img class="lightmode" width ="100" border="0" margin="50px" align="center" src="/images/logos/github-mark-white.png"/>
+                <img class="darkmode" width ="100" border="0" margin="50px" align="center" src="/images/logos/github-mark.png"/>
+              </a>
             </span>
             <h2 id="survey">Form</h2>
             <hr>
