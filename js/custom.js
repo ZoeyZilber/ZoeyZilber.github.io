@@ -4,14 +4,11 @@
   // The widget object
   var widgets;
 
-  /**
-   * Create the html elements for a masonry item.
-   * @private
-   * @param {string} caption - the caption of the item.
-   * @param {string} imageSrc - the source URL of an image for the item.
-   * @param {string} credit - the credit of the photo.
-   * @returns {Object} - a jQuery DOM object.
-   */
+function darkmodeToggle() {
+                       var element = document.body;
+                       element.classList.toggle("dark-mode");
+                    }
+  
   function createMasonryItemHTML(caption, imageSrc, credit) {
     // This is a hack for Firefox, since Firefox does not respect the CSS "break-inside" and "page-break-inside"
     // We have to set the CSS display to "inline-flex" to prevent Firefox from breaking the figure in the middle
