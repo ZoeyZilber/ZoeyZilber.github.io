@@ -1,1 +1,765 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Zoey Zilber |Theatre</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" sizes="512x512" href="images/icons/zoeyzilber.ico">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/footer.js"></script>
+  <style>
+    .menu-theatre {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+      /* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #97A9BC;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #B7CBE0;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #B7CBE0;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 6px 12px;
+  border: 1px solid #5A646F;
+  border-top: none;
+}
+  /* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #B7CBE0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  width: 40%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -25px;
+  border: 4px solid #c5c5c5;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  background-color: #121212;
+;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+    /* The actual content */
+.content {
+  position: relative;
+}
+    
+@media (prefers-color-scheme: light) {
+  .content {
+  background-color: white;
+}
+  .tabcontent {
+    background-color: white;
+  }
+}
+
+  
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 25px;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class = "content">
+  <div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'All')" id="defaultOpen">All</button>
+  <button class="tablinks" onclick="openTab(event, 'Lighting')">Lighting</button>
+  <button class="tablinks" onclick="openTab(event, 'Sound')">Sound</button>
+  <button class="tablinks" onclick="openTab(event, 'setprops')">Set/Props</button>
+  <button class="tablinks" onclick="openTab(event, 'Coursework')">Coursework</button>
+</div>
+
+<div id="All" class="tabcontent">
+  <h2>Featured Theatre Work</h2>
+            <hr>
+  <h3>Summer Stock Audio Assistant at Weston Theater Company</h3>
+            <p class="text">
+              Audio assistant for four shows (two musicals, two plays). Learned how to construct ear rigs, mount antennas, and conduct a line check and scratch test. Acted as an instrument technician for guitars (electric and acoustic) and drum set. Primarily worked as an A2 while intermittently shadowing the A1. 
+              Season included <em>Buddy: The Buddy Holly Story</em>, <em>Ur A Good Man Charlie Brown</em>, <em>What The Constitution Means to Me</em>, and <em>Singin' In The Rain</em>.
+            </p><br>
+  <h3>Dante Certification Level 2</h3>
+            <span><p class="text">
+              DANTE or Digital Audio Network Through Ethernet
+            </p>
+            <img class="image max-width-400" src="/images/dantecert.jpg" loading="eager"></span>
+            <h2>Timeline</h2>
+            <hr>
+  <div class="timeline">
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Solomon Schechter Day School: 4th and 5th grade production of <em>Curtains</em>
+      <br>Role: Overhire Sound Board Operator</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Dance Department: 15th grade spring studio production of <em>The Art of Remembering</em>
+      <br>Role: Lighting Designer and Electrician</p>
+      <a href="/artofremembering" target="_blank"><img width="300px" border="0" src="images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade spring production of <em>Everybody</em>
+      <br>Role: Sound Designer, Board Operator, and Scene Shop Worker</p>
+      <a href="/everybody" target="_blank"><img width="300px" border="0" src="images/theatre/everybody/DFP_0019.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Duct Tape Productions: 15th grade spring production of <em>Grease</em>
+      <br>Role: Sound Designer</p>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade interterm production of <em>You on The Moors Now</em>
+      <br>Role: Assistant Lighting Designer, Electrician, and Scene Shop Worker</p>
+      <a href="/yotmn" target="_blank"><img width="300px" border="0" src="images/theatre/yotmn/DFP_0425.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 15th grade fall faculty dance concert
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 15th grade fall studio production of <em>The Actor's Nightmare</em>, <em>Cowboy Mouth</em>, <em>The Yalta Game</em>, and <em>Trifles</em>
+      <br>Role: Sound Designer</p>
+      <a href="/fallstudio" target="_blank"><img width="300px" border="0" src="images/theatre/fallstudio/DSC02482-ARW_DxO_DeepPRIME.jpg" loading="lazy"/></a>
+    </div>
+  </div>
+        <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Duct Tape Productions: 15th grade fall production of Spring Awakening
+      <br>Role: Sound Designer and Board Operator</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 15th grade fall production of <em>Dance Nation</em>
+      <br>Role: Assistant Lighting Designer and Electrician</p>
+      <a href="/dancenation" target="_blank"><img width="300px" border="0" src="images/theatre/dancenation/DFP_0604.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+ <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Singin' In The Rain</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>What The Constitution Means To Me</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Ur A Good Man Charlie Brown</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Buddy- The Buddy Holly Story</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+ <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade spring studio production of <em>Here We Go</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 14th grade spring grad dance concert
+      <br>Role: Assistant Lighting Designer</p>
+      <a href="/springgraddance" target="_blank"><img width="300px" border="0" src="images/theatre/graddance/graddance5.png" loading="lazy"/></a>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade spring production of <em>La Ruta</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Duct Tape Productions: 14th grade spring production of <em>Chicago</em>
+      <br>Role: Sound Designer</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 14th grade spring dance concert
+      <br>Role: Lighting Designer</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade interterm production of <em>My H8 Letter To The Gr8 American Theater</em>
+      <br>Role: Sound Board Operator</p>
+    </div>
+  </div>
+ <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 14th grade fall production of <em>Our Dear Dead Drug Lord</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 14th grade fall production of <em>Drowsy Chaperone</em>
+      <br>Role: Load-in, Spotlight Operator</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 13th grade spring production of <em>Fun Home</em>
+      <br>Role: Props</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 13th grade spring production of <em>Big Fish</em>
+      <br>Role: Load-in, Sound</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Committee: 13th grade spring production of <em>Craters On The Moon</em>
+      <br>Role: Lighting</p>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 13th grade interterm production of <em>Twilight: Los Angeles, 1992</em>
+      <br>Role: Props</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 13th grade interterm production of <em>Rocky Horror Picture Show</em>
+      <br>Role: Load-in, Lighting</p>
+    </div>
+  </div>  
+    <div class="container right">
+    <div class="content">
+      <h3>2021</h3>
+      <p>Duct Tape Productions: 13th grade fall production of <em>Pippin</em>
+      <br>Role: Load-in, Sound</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2021</h3>
+      <p>Smith Theatre Committee: 13th grade Fall One-Act Play Festival including <em>By the Rising of the Moon, J'Adoube, Leave Your Shoes at the Door, The Tale of Iris and Aster, Like a Log, and Nesgar</em> (student written)
+      <br>Role: Sound/Lighting Designer and Board Operator</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2020</h3>
+      <p>Red Curtain Drama Club: 12th grade Playhem (4-minute one-acts) production of <em>Nihilists-R-Us</em>
+      <br>Role: Actor</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2020</h3>
+      <p>Red Curtain Drama Club: 12th grade winter production of <em>Ur A Good Man Charlie Brown</em>
+      <br>Role: Sound</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2019</h3>
+      <p>Red Curtain Drama Club: 12th grade fall production of <em>Sense and Sensibility</em>
+      <br>Role: Stage Manager/Assistant Director</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2019</h3>
+      <p>Red Curtain Drama Club: 11th grade winter production of <em>Seussical</em>
+      <br>Role: Electrician and Spotlight Operator</p>
+    </div>
+  </div>
+      <div class="container right">
+    <div class="content">
+      <h3>2018</h3>
+      <p>Red Curtain Drama Club: 11th grade fall production of <em>Radium Girls</em>
+      <br>Role: Electrician and Light Board Operator</p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h3>2016</h3>
+      <p>8th grade production of the <em>Wizard of Oz</em> in Hebrew
+      <br>Role: Props/Run Crew</p>
+</div>
+  </div>
+    </div>
+</div>
+<div id="Lighting" class="tabcontent">
+  <h3>Lighting</h3>
+  <div class="timeline">
+    <div class="container left">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Dance Department: 15th grade spring studio production of <em>The Art of Remembering</em>
+      <br>Role: Lighting Designer and Electrician</p>
+      <a href="/artofremembering" target="_blank"><img width="300px" border="0" src="images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg"/></a>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade interterm production of <em>You on The Moors Now</em>
+      <br>Role: Assistant Lighting Designer, Electrician, and Scene Shop Worker</p>
+      <a href="/yotmn" target="_blank"><img width="300px" border="0" src="images/theatre/yotmn/DFP_0425.JPG"/></a>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 15th grade fall faculty dance concert
+      <br>Role: Electrician</p>
+    </div>
+  </div> 
+    <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 15th grade fall production of <em>Dance Nation</em>
+      <br>Role: Assistant Lighting Designer and Electrician</p>
+      <a href="/dancenation" target="_blank"><img width="300px" border="0" src="images/theatre/dancenation/DFP_0604.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade spring studio production of <em>Here We Go</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 14th grade spring grad dance concert
+      <br>Role: Assistant Lighting Designer</p>
+      <a href="/springgraddance" target="_blank"><img width="300px" border="0" src="images/theatre/graddance/graddance5.png" loading="lazy"/></a>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade spring production of <em>La Ruta</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Dance Department: 14th grade spring dance concert
+      <br>Role: Lighting Designer</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 14th grade fall production of <em>Our Dear Dead Drug Lord</em>
+      <br>Role: Electrician</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 14th grade fall production of <em>Drowsy Chaperone</em>
+      <br>Role: Load-in, Spotlight Operator</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Committee: 13th grade spring production of <em>Craters On The Moon</em>
+      <br>Role: Lighting</p>
+    </div>
+  </div>
+   <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 13th grade interterm production of <em>Rocky Horror Picture Show</em>
+      <br>Role: Load-in, Lighting</p>
+    </div>
+  </div>  
+     <div class="container left">
+    <div class="content">
+      <h3>2021</h3>
+      <p>Smith Theatre Committee: 13th grade Fall One-Act Play Festival including <em>By the Rising of the Moon, J'Adoube, Leave Your Shoes at the Door, The Tale of Iris and Aster, Like a Log, and Nesgar</em> (student written)
+      <br>Role: Sound/Lighting Designer and Board Operator</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2019</h3>
+      <p>Red Curtain Drama Club: 11th grade winter production of <em>Seussical</em>
+      <br>Role: Electrician and Spotlight Operator</p>
+    </div>
+  </div>
+      <div class="container left">
+    <div class="content">
+      <h3>2018</h3>
+      <p>Red Curtain Drama Club: 11th grade fall production of <em>Radium Girls</em>
+      <br>Role: Electrician and Light Board Operator</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="Sound" class="tabcontent">
+  <h3>Sound</h3>
+    <div class="timeline">
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Solomon Schechter Day School: 4th and 5th grade production of <em>Curtains</em>
+      <br>Role: Overhire Sound Board Operator</p>
+    </div>
+  </div>
+     <div class="container left">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade spring production of <em>Everybody</em>
+      <br>Role: Sound Designer, Board Operator, and Scene Shop Worker</p>
+      <a href="/everybody" target="_blank"><img width="300px" border="0" src="images/theatre/everybody/DFP_0019.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Duct Tape Productions: 15th grade spring production of <em>Grease</em>
+      <br>Role: Sound Designer</p>
+    </div>
+  </div>
+       <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Singin' In The Rain</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>What The Constitution Means To Me</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Ur A Good Man Charlie Brown</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Weston Theater Company: Summer production of <em>Buddy- The Buddy Holly Story</em>
+      <br>Role: Audio Assistant</p>
+    </div>
+  </div>
+       <div class="container left">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Duct Tape Productions: 14th grade spring production of <em>Chicago</em>
+      <br>Role: Sound Designer</p>
+    </div>
+  </div>
+     <div class="container right">
+    <div class="content">
+      <h3>2023</h3>
+      <p>Smith Theatre Department: 14th grade interterm production of <em>My H8 Letter To The Gr8 American Theater</em>
+      <br>Role: Sound Board Operator</p>
+    </div>
+  </div>
+       <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Duct Tape Productions: 13th grade spring production of <em>Big Fish</em>
+      <br>Role: Load-in, Sound</p>
+    </div>
+  </div>
+        <div class="container right">
+    <div class="content">
+      <h3>2021</h3>
+      <p>Duct Tape Productions: 13th grade fall production of <em>Pippin</em>
+      <br>Role: Load-in, Sound</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2021</h3>
+      <p>Smith Theatre Committee: 13th grade Fall One-Act Play Festival including <em>By the Rising of the Moon, J'Adoube, Leave Your Shoes at the Door, The Tale of Iris and Aster, Like a Log, and Nesgar</em> (student written)
+      <br>Role: Sound/Lighting Designer and Board Operator</p>
+    </div>
+  </div>
+</div>
+  <div class="container right">
+    <div class="content">
+      <h3>2020</h3>
+      <p>Red Curtain Drama Club: 12th grade winter production of <em>Ur A Good Man Charlie Brown</em>
+      <br>Role: Sound</p>
+    </div>
+  </div>
+</div>
+  
+<div id="setprops" class="tabcontent">
+  <h3>Set/Props</h3>
+  <div class="timeline">
+    <div class="container right">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade spring production of <em>Everybody</em>
+      <br>Role: Sound Designer, Board Operator, and Scene Shop Worker</p>
+      <a href="/everybody" target="_blank"><img width="300px" border="0" src="images/theatre/everybody/DFP_0019.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2024</h3>
+      <p>Smith Theatre Department: 15th grade interterm production of <em>You on The Moors Now</em>
+      <br>Role: Assistant Lighting Designer, Electrician, and Scene Shop Worker</p>
+      <a href="/yotmn" target="_blank"><img width="300px" border="0" src="images/theatre/yotmn/DFP_0425.JPG" loading="lazy"/></a>
+    </div>
+  </div>
+      <div class="container right">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 13th grade spring production of <em>Fun Home</em>
+      <br>Role: Props</p>
+    </div>
+  </div>
+    <div class="container left">
+    <div class="content">
+      <h3>2022</h3>
+      <p>Smith Theatre Department: 13th grade interterm production of <em>Twilight: Los Angeles, 1992</em>
+      <br>Role: Props</p>
+    </div>
+  </div>
+    <div class="container right">
+    <div class="content">
+      <h3>2016</h3>
+      <p>8th grade production of the <em>Wizard of Oz</em> in Hebrew
+      <br>Role: Props/Run Crew</p>
+    </div>
+    </div>
+  </div>
+</div>
+      
+<div id="Coursework" class="tabcontent">
+         <h2>THE 400 - Special Studies</h2>
+            <hr>
+            <p class="text">
+              2 credit special studies for assistant lighting designing and sound designing.
+            </p>       
+  <h2>THE 200 - Theatre Production</h2>
+            <hr>
+            <p class="text">
+              1 credit studio course. Assigned scene shop.
+            </p>       
+  <h2>THE 261 - Writing for Theatre I</h2>
+            <hr>
+            <p class="text">
+              4 credit course.
+            </p>
+         <h2>THE 252 - Intro to Set Design</h2>
+            <hr>
+            <p class="text">
+               4 credit course.
+            </p>       
+  <h2>THE 316 - Contemporary Canadian Drama</h2>
+            <hr>
+            <p class="text">
+              4 credit course.
+            </p>
+         <h2>THE 353 - Lighting Design II</h2>
+            <hr>
+            <p class="text">
+              4 credit course. Lighting designed three dances.
+            </p>                     
+  <h2>THE 200 - Theatre Production</h2>
+            <hr>
+            <p class="text">
+              1 credit studio course. Assigned sound board operator.
+            </p>
+  <h2>THE 141 - Acting I</h2>
+            <hr>
+            <p class="text">
+              4 credit course.
+            </p>
+  <h2>THE 253 - Intro to Lighting Design</h2>
+            <hr>
+            <p class="text">
+              4 credit lecture.
+            </p>     
+  <h2>THE 200 - Theatre Production</h2>
+            <hr>
+            <p class="text">
+              1 credit studio course. Assigned props charge.
+            </p>
+</div> 
+      
+<script>
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+    </div>
+  </div>
+</div>
+  <div class="footer-container"></div>
+</body>
+
+</html>
 
