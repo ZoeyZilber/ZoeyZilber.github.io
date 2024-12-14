@@ -2,6 +2,47 @@
 
 <html>
     <head>
+        <style>
+            .darkmodeButton{
+                position: relative;
+                background-color: #34495e;
+                width: 200px;  
+                height: 400px; 
+            }
+
+            .darkmodeButton > div {
+            position: absolute;
+            text-align: center;
+            background-color: #ffffff;
+            border: 1px solid;
+            box-sizing: border-box;
+            }
+
+            .topDot {
+                left: 75px;
+                top: 5%;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .center {
+                left: 25px;
+                top: 100px;
+                width: 150px;
+                height: 100px;
+                border-radius: 5px;
+            }
+            
+            .bottomDot {
+                left: 75px;
+                top: 85%;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+            }
+
+        </style>
     <div class="banner">
      <div class="banner-table flex-row-space-between">
     <div class="banner-items flex-row-left flex-item">
@@ -17,7 +58,7 @@
                   <div id="topDot"></div>
                   <div id="center"></div>
                   <div id="bottomDot"></div>
-                  <div id="plate"></div>
+                  <div id="mainRectangle"></div>
               </div>
               <script src="custom.js"></script>
           </div>
