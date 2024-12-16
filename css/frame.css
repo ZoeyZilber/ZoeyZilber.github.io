@@ -1562,12 +1562,6 @@ ol.nested>li:before {
   }
 }
 
-#darkmodeButton {
-     background-image: url(/images/icons/darkModeToggle.jpg );
-     height: 40px;
-     width: 20px;
-}
-
 .dark-mode {
     body {
         background-color: #121212;
