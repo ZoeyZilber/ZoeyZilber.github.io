@@ -269,18 +269,22 @@
                 closeModal();
               }
             };
-      
-            window.onload = function() {
-          const images = document.querySelectorAll('img.lazy-load');
-          images.forEach(image => {
-            image.setAttribute('src', image.getAttribute('data-src'));
-               image.addEventListener('load', function () {
-                imageLoaded(image);
-            });
-            image.onload = () => image.removeAttribute('data-src'); 
-             const modal = document.getElementById('myModal');
-              modal.style.opacity = 1;
-          });
+           window.onload = function() {
+
+  document.getElementById('myModal').style.display = "none";
+
+  const images = document.querySelectorAll('img.lazy-load');
+  images.forEach(image => {
+    image.setAttribute('src', image.getAttribute('data-src'));
+    image.addEventListener('load', function () {
+      imageLoaded(image);
+    });
+    image.onload = () => image.removeAttribute('data-src');
+  });
+  
+  const modal = document.getElementById('myModal');
+  modal.style.opacity = 1;
+};
   </script>
 </body>
 
