@@ -13,7 +13,6 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/js/menu.js"></script>
-  <script src="/js/tab.js"></script>
   <script src="/js/footer.js"></script>
   <style>
     .menu-engineering {
@@ -242,5 +241,33 @@
   </div>
   <div class="footer-container"></div>
 </body>
+  <script>
+     function filterContent(type) {
+      const tabcontent = document.querySelectorAll(".tabcontent");
+      tabcontent.forEach(content => content.style.display = "none");
 
+      const coursework = document.querySelectorAll(".coursework");
+      const extracurricular = document.querySelectorAll(".extracurricular");
+      coursework.forEach(item => item.style.display = "none");
+      extracurricular.forEach(item => item.style.display = "none");
+
+      if (type === 'all') {
+        document.getElementById('All').style.display = "block";
+        coursework.forEach(item => item.style.display = "block");
+        extracurricular.forEach(item => item.style.display = "block");
+      } else if (type === 'coursework') {
+        document.getElementById('All').style.display = "block";
+        coursework.forEach(item => item.style.display = "block");
+      } else if (type === 'extracurricular') {
+        document.getElementById('All').style.display = "block";
+        extracurricular.forEach(item => item.style.display = "block");
+      }
+
+      var tabbuttons = document.querySelectorAll(".tab button");
+      tabbuttons.forEach(button => button.classList.remove("active"));
+      document.querySelector(`button[onclick="filterContent('${type}')"]`).classList.add("active");
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
 </html>
