@@ -129,40 +129,4 @@ function darkmodeToggle() {
     // Create the share button and dialog
     createShareButtonAndDialog();
 
-    // Create the Unsplash photo picker
-    // To make this work, you need to code a backend API to serve Unsplash photos
-    // For python flask, an example is "https://github.com/yenchiah/COCTEAU-TUD/blob/main/back-end/www/controllers/photos_controller.py"
-    // You need to change photoURL your API URL, such as "http://localhost:5000/photos/random?count=30"
-    var photoURL = undefined; // for demo, the photo picker will load "file/photo.json"
-    var $photoPickerDialog = widgets.createUnsplashPhotoPickerDialog("dialog-photo-picker", undefined, photoURL, function (d) {
-      $("#vision-image").data("raw", d).prop("src", d["urls"]["regular"]);
-    });
-    $("#vision-image-frame").on("click", function () {
-      $photoPickerDialog.dialog("open");
-    });
 
-    // Create the masonry
-    createMasonry();
-
-    // Create the gallery
-    // In practice, these images urls may come from your server via http ajax requests.
-    var $gallery = $("#gallery");
-    for (var i = 0; i < 8; i++) {
-      var item = '<a href="javascript:void(0)" class="flex-column">' +
-        '<img src="img/dummay-img.png">' +
-        '<div>Image Caption</div>' +
-        '</a>';
-      $gallery.append($(item));
-    }
-
-    // Create custom tabs
-    widgets.createCustomTab({
-      selector: "#custom-tab"
-    });
-
-    // Set the custom legend
-    widgets.setCustomLegend($("#custom-legend"));
-  }
-
-  $(init);
-})();
