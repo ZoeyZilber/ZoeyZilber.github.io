@@ -18,32 +18,43 @@
             border: 1px solid;
             box-sizing: border-box;
             }
+            
+            #topDot, #bottomDot{
+            	left: 50%;
+            	border-radius: 50%;
+                transform: translateX(65%);
+                width: 10px;
+                height: 10px;
+                background-color: #ffffff;
+            }
 
             #topDot {
-                left: 75px;
                 top: 5%;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                background-color: #ffffff;
+  
             }
             
             #center {
                 left: 25px;
                 top: 100px;
-                width: 150px;
-                height: 100px;
+                width: 25px;
+                height: 50px;
                 border-radius: 5px;
                 background-color: #ffffff;
             }
             
             #bottomDot {
-                left: 75px;
                 top: 85%;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                background-color: #ffffff;
+            }
+            
+            #switch {
+            	left: 10px;
+                top: 162px;
+            	width: 20px;
+                height: 25px;
+                position: absolute;
+                z-index: 1;
+                border-radius: 5px;
+                background-color: #34495e;
             }
 
         </style>
@@ -64,7 +75,7 @@
                   <div id="topDot"></div>
                   <div id="center"></div>
                   <div id="bottomDot"></div>
-                  <div id="mainRectangle"></div>
+                  <div id="switch"></div>
               </div>
               <script src="/custom.js"></script>
           </div>
