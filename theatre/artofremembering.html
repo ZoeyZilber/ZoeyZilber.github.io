@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Zoey Zilber | Art of Remembering Smith College Theater Department 2024 Spring Studio Production</title>
+  <title>Zoey Zilber | Dance Nation Smith College Theater Department 2023 Fall Production</title>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" sizes="512x512" href="/images/icons/zoeyzilber.ico">
   <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
@@ -15,7 +15,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/js/menu.js"></script>
   <script src="/js/footer.js"></script>
-  <script src="/js/galleryModal.js"></script>
   <style>
     .menu-theatre {
       color: rgb(255, 255, 255) !important;
@@ -191,6 +190,98 @@
     <img class="modal-content" id="modalImage">
     <div class="next" onclick="changeImage(1)">&#10095;</div>
   </div>
+
+  <script>
+    var currentImageIndex = 0;
+    var images = [
+                  "/images/theatre/dancenation/DFP_0011.JPG",
+                  "/images/theatre/dancenation/DFP_0021.JPG",
+                  "/images/theatre/dancenation/DFP_0023.JPG",
+                  "/images/theatre/dancenation/DFP_0025.JPG",
+                  "/images/theatre/dancenation/DFP_0026.JPG",
+                  "/images/theatre/dancenation/DFP_0028.JPG",
+                  "/images/theatre/dancenation/DFP_0036.JPG",
+                  "/images/theatre/dancenation/DFP_0071.JPG",
+                  "/images/theatre/dancenation/DFP_0085.JPG",
+                  "/images/theatre/dancenation/DFP_0130.JPG",
+                  "/images/theatre/dancenation/DFP_0179.JPG",
+                  "/images/theatre/dancenation/DFP_0192.JPG",
+                  "/images/theatre/dancenation/DFP_0197.JPG",
+                  "/images/theatre/dancenation/DFP_0201.JPG",
+                  "/images/theatre/dancenation/DFP_0238.JPG",
+                  "/images/theatre/dancenation/DFP_0321.JPG",
+                  "/images/theatre/dancenation/DFP_0411.JPG",
+                  "/images/theatre/dancenation/DFP_0536.JPG",
+                  "/images/theatre/dancenation/DFP_0583.JPG",
+                  "/images/theatre/dancenation/DFP_0599.JPG",
+                  "/images/theatre/dancenation/DFP_0604.JPG",
+                  "/images/theatre/dancenation/DFP_0609.JPG",
+                  "/images/theatre/dancenation/DFP_0611.JPG",
+                  "/images/theatre/dancenation/DFP_0623.JPG",
+                  "/images/theatre/dancenation/DFP_0626.JPG",
+                  "/images/theatre/dancenation/DFP_0629.JPG",
+                  "/images/theatre/dancenation/DFP_0633.JPG",
+                  "/images/theatre/dancenation/DFP_0635.JPG",
+                  "/images/theatre/dancenation/DFP_0637.JPG",
+                  "/images/theatre/dancenation/DFP_0654.JPG",
+                  "/images/theatre/dancenation/DFP_0726.JPG",
+                  "/images/theatre/dancenation/DFP_0741.JPG",
+                  "/images/theatre/dancenation/DFP_0829.JPG",
+                  "/images/theatre/dancenation/DFP_0971.JPG",
+                  "/images/theatre/dancenation/DFP_0993.JPG",
+                  "/images/theatre/dancenation/DFP_1032.JPG",
+                  "/images/theatre/dancenation/DFP_1054.JPG",
+                  "/images/theatre/dancenation/DFP_1055.JPG",
+                  "/images/theatre/dancenation/DFP_1070.JPG"
+                ];
+
+            function openModal(index) {
+              currentImageIndex = index - 1; // Subtract 1 to adjust for 0-based index
+              showImage();
+              document.getElementById('myModal').style.display = "block";
+              document.getElementById('myModal').style.opacity = 1;
+            }
+
+            function closeModal() {
+              document.getElementById('myModal').style.display = "none";
+            }
+
+            function changeImage(direction) {
+              currentImageIndex += direction;
+              if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1;
+              }
+              if (currentImageIndex >= images.length) {
+                currentImageIndex = 0;
+              }
+              showImage();
+            }
+
+            function showImage() {
+              var modalImage = document.getElementById('modalImage');
+              modalImage.src = images[currentImageIndex];
+            }
+
+            window.onclick = function(event) {
+              if (event.target === document.getElementById('myModal')) {
+                closeModal();
+              }
+            };
+
+            window.onload = function () {
+              // Initialize lazy loading
+              const lazyImages = document.querySelectorAll('img.lazy-load');
+              lazyImages.forEach(image => {
+                const fullImage = image.getAttribute('data-src');
+                image.setAttribute('src', fullImage); // Set src attribute to start loading images
+                image.onload = () => image.removeAttribute('data-src'); // Remove data-src when loaded
+              });
+
+              // Ensure modal is hidden on page load
+              document.getElementById('myModal').style.display = "none";
+            };
+</script>
+
 </body>
 
 </html>
