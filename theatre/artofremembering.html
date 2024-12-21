@@ -1,0 +1,196 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <title>Zoey Zilber | Art of Remembering Smith College Theater Department 2024 Spring Studio Production</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" sizes="512x512" href="/images/icons/zoeyzilber.ico">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="/js/footer.js"></script>
+  <script src="/js/galleryModal.js"></script>
+  <style>
+    .menu-theatre {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+
+    .content {
+      overflow-x: hidden;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; 
+        gap: 10px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+        opacity: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: auto;
+    }
+
+    .modal-content {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+      margin: auto;
+      display: block;
+      animation: zoom 0.6s;
+    }
+
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Arrow Buttons */
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      padding: 16px;
+      font-size: 18px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      cursor: pointer;
+      border: none;
+      transform: translate(0%, -50%);
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Zoom Effect */
+    @keyframes zoom {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+      .menu-container{
+          z-index: 1;
+      }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+        <div class="flex-row">
+          <div class="flex-item flex-column">
+            <h2 style="text-align:center">Dance Nation Smith College Theater Department 2023 Fall Production</h2>
+            <p>Director Daniel Elihu Kramer, Choreographer Frankie Baron, Faculty designers Ed Check (Set) and Lara Dubin (Lighting), Rex Tans ’25 designed the costumes, Emma Scharf ’26 was the Sound Designer, and Sula Johnson ’26 was the Props Charge.<br>Photos Credit to Derek Fowles.</p>
+
+            <div class="gallery">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0011-min.JPG" alt="Image 1" onclick="openModal(1)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0021-min.JPG" alt="Image 2" onclick="openModal(2)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0023-min.JPG" alt="Image 3" onclick="openModal(3)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0025-min.JPG" alt="Image 4" onclick="openModal(4)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0026-min.JPG" alt="Image 5" onclick="openModal(5)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0028-min.JPG" alt="Image 6" onclick="openModal(6)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0036-min.JPG" alt="Image 7" onclick="openModal(7)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0071-min.JPG" alt="Image 8" onclick="openModal(8)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0085-min.JPG" alt="Image 9" onclick="openModal(9)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0130-min.JPG" alt="Image 10" onclick="openModal(10)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0179-min.JPG" alt="Image 11" onclick="openModal(11)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0192-min.JPG" alt="Image 12" onclick="openModal(12)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0197-min.JPG" alt="Image 13" onclick="openModal(13)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0201-min.JPG" alt="Image 14" onclick="openModal(14)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0238-min.JPG" alt="Image 15" onclick="openModal(15)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0536-min.JPG" alt="Image 16" onclick="openModal(16)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0583-min.JPG" alt="Image 17" onclick="openModal(17)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0599-min.JPG" alt="Image 18" onclick="openModal(18)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0604-min.JPG" alt="Image 19" onclick="openModal(19)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0609-min.JPG" alt="Image 20" onclick="openModal(20)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0611-min.JPG" alt="Image 21" onclick="openModal(21)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0623-min.JPG" alt="Image 22" onclick="openModal(22)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0626-min.JPG" alt="Image 23" onclick="openModal(23)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0629-min.JPG" alt="Image 24" onclick="openModal(24)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0633-min.JPG" alt="Image 25" onclick="openModal(25)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0635-min.JPG" alt="Image 26" onclick="openModal(26)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0637-min.JPG" alt="Image 27" onclick="openModal(27)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0654-min.JPG" alt="Image 28" onclick="openModal(28)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0726-min.JPG" alt="Image 29" onclick="openModal(29)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0741-min.JPG" alt="Image 30" onclick="openModal(30)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0829-min.JPG" alt="Image 31" onclick="openModal(31)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0971-min.JPG" alt="Image 32" onclick="openModal(32)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_0993-min.JPG" alt="Image 33" onclick="openModal(33)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_1032-min.JPG" alt="Image 34" onclick="openModal(34)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_1054-min.JPG" alt="Image 35" onclick="openModal(35)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_1055-min.JPG" alt="Image 36" onclick="openModal(36)" class="lazy-load">
+              <img src="\images\theatre\dancenation\thumbnails\DFP_1070-min.JPG" alt="Image 37" onclick="openModal(37)" class="lazy-load">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-container"></div>
+
+  <div id="myModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="prev" onclick="changeImage(-1)">&#10094;</div>
+    <img class="modal-content" id="modalImage">
+    <div class="next" onclick="changeImage(1)">&#10095;</div>
+  </div>
+</body>
+
+</html>
