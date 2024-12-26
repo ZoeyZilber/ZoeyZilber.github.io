@@ -1443,6 +1443,9 @@ ol.nested>li:before {
   color: #c5c5c5;
 
   }
+  p {
+    color: #c5c5c5;
+  }
   .highlight-text {
     color: lightblue;
 }
