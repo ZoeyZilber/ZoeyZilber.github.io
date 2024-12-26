@@ -7,14 +7,6 @@
   width: 240px;
 }
 
-#dialog-1,
-#dialog-2,
-#dialog-3,
-#dialog-4,
-#share-dialog {
-  display: none;
-}
-
 #share-url {
   width: 100%;
   -webkit-touch-callout: default !important;
