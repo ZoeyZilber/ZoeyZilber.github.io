@@ -1,17 +1,18 @@
 
 
 html,
-body:not(.darkmode) {
+body {
   margin: 0;
   padding: 0;
-  background-color: white;
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   left: 0;
   right: 0;
   width: auto;
 }
+body:not(.darkmode) {
+  background-color: white;
+}
 
-/* This is a hack for FireFox that the <b> tag does not work */
 strong,
 b {
   font-weight: bold;
