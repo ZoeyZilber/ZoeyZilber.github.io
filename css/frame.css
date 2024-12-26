@@ -1428,7 +1428,7 @@ ol.nested>li:before {
 }
 
 .darkmode {
-    body {
+  content {
         background-color: #121212;
         color: white;
     }
