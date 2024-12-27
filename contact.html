@@ -20,6 +20,32 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+
+    img.lightmode {
+      display: block;
+    }
+
+    img.darkmode {
+      display: none;
+    }
+
+    .content-container.darkmode img.lightmode {
+      display: none;
+    }
+    
+    .content-container.darkmode img.darkmode {
+      display: block;
+    }
+
+    img {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
   </style>
 </head>
 
