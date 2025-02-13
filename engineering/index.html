@@ -1,1 +1,314 @@
 
+<!doctype html>
+<html>
+
+<head>
+  <title>Zoey Zilber | Engineering</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" sizes="512x512" href="/images/icons/zoeyzilber.ico">
+  <link href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="/css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="/js/menu.js"></script>
+  <script src="/js/footer.js"></script>
+  <style>
+    .menu-engineering {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+
+    /* Style the tab/filter buttons */
+    .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #97A9BC;
+    }
+
+    .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      font-weight: bold;
+    }
+
+    .tab button:hover {
+      background-color: #B7CBE0;
+    }
+
+    .tab button.active {
+      background-color: #B7CBE0;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+      display: none;
+      padding: 6px 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+    }
+
+    .coursework, .extracurricular {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="tab">
+        <button class="tablinks" onclick="filterContent('all')" id="defaultOpen">All</button>
+        <button class="tablinks" onclick="filterContent('coursework')">Coursework</button>
+        <button class="tablinks" onclick="filterContent('extracurricular')">Extracurricular</button>
+      </div>
+
+      <div id="All" class="tabcontent">
+         <h2>Featured Engineering Work</h2>
+            <hr>
+         <h3>Full Year EGR 422D - Design Clinic Engineering Capstone Sponsored by Werfen (Ongoing)</h3>
+            <p class="text">
+              Working with two other senior engineering majors to design a mechanism to open reagent bags within the GEM family of blood gas analyzers. Performed as project manager during the first quarter. Focus on engineering design, teamwork, and applied engineering knowledge.
+            </p>
+        <h3>Passed Fundamentals of Engineering Exam Other Disciplines</h3>
+            <span><p class="text">
+              The FE exam is the first step in the process of becoming a licensed professional engineer (P.E.).
+            </p>
+            <img class="image max-width-400" src="/images/febadge.png" loading="eager"></span>
+        <h2>Content</h2>
+        <hr>
+        <div class="extracurricular">
+          <h3>Move Lab Member (Ongoing)</h3>
+          <hr>
+          <p class="text">
+            Assist in Smith research lab focused on using motion tracking in conjunction with force and myoelectric sensors and electrode cap to evaluate rowers, tennis players, and individuals with multiple sclerosis. Software includes fNIRS and Visual 3D. Specific tasks: run trials and apply MatLab and Python to analyze data for habitual movements and trends.
+          </p>
+        </div>
+         <div class="coursework">
+          <h3>EGR 389 - Modeling Processes</h3>
+          <hr>
+          <p class="text">
+            4 credit lecture. Utilizing and training artificial neural networks, multiple linear regression, and ARIMA models in order to draw conclusions about data. Course used MatLab and relevant packages.
+          </p> 
+        </div>
+        <div class="coursework">
+          <h3>EGR 390fe - Finite Element Modeling</h3>
+          <hr>
+          <p class="text">
+            4 credit lecture. Homework assignments included modeling an aluminum spring, an airfoil in a wind tunnel, and an electric tea kettle heating up. Focus on understanding the impact of assumptions, transferring knowledge, and designing around a problem and design constraints. Final project involved modeling the stress and strain of human skin around a chemo port using COMSOL Multiphysics.
+          </p> 
+          <h3>EGR 351 - Intro to BioMedical Engineering</h3>
+          <hr>
+          <p class="text">
+            4 credit lecture. Case studies on calculating the flow, electrical energy, and mechanical energy needed for a total artificial heart, analyzing angles and range of movement of the human musculoskeletal system in OpenSim, and modeling insulin and glucose intake for Type 1 diabetes patients. Class focused on patient needs, identifying unmet needs, and applying engineering to find new solutions. Final project involved presentations and mathematical/scientific quantification of potential innovations in wound healing and the prevention of biofilms using basic RLC circuits and electromagnetic waves.
+          </p> 
+        </div>
+         <div class="extracurricular">
+          <h3>Tufts University Nano Lab</h3>
+          <hr>
+          <p class="text">
+            Undertook an independent project to put electronics on flexible, conformal and/or stretchable substrates for skin application. Substrates had the conductive paths laser cut into them with components like resistors soldered on afterwards. Improved skills in laser printing and soldering.
+          </p>
+        </div>
+        <div class="coursework">
+          <h3>EGR 373 - Skeletal Biomechanics</h3>
+          <hr>
+          <p class="text">4 credit lecture. Final project involved reading writing a research paper using studies on PubMed regarding the forces acting on cetacean bones.
+          </p> 
+      <h3>EGR 375 - Strength of Materials</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Final project involved the forces when a tower bell is rung from its resting position.
+        </p>
+      <h3>EGR 390 - Teaching Science, Engineering, and Technology</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Final project involved writing a lesson plan and teaching a class on waves.
+        </p>
+      <h3>EGR 374 - Fluid Mechanics</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture with lab. Involved coding in Python. Final project had 3D modeling and printing of a penguin wing for testing in a wind tunnel.
+        </p>
+      <h3>EGR 320 - Signals and Systems</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Involved coding in MatLab.
+        </p>
+      <h3>BIO 132 - Molecules, Cells, and Systems and BIO 133</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture with 1 credit lab. Intro to biology.
+        </p>
+         <h3>EGR 290 - Engineering Thermodynamics</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture.
+        </p>
+      <h3>EGR 220 - Circuit Theory</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture with lab. Final project involved measuring electrical input of various theatrical lighting instruments.
+        </p>
+      <h3>PHY 210 - Mathematical Methods of Physics, Science, and Engineering</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture. Learned to program in Mathematica.
+        </p>
+      <h3>EGR 270 - Mechanics I</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture with lab. Intro to mechanics. Final project involved making concrete and crushing it in an Instron in order to simulate the forces needed to destroy a concrete bridge on campus.
+        </p>
+      <h3>MTH 212 - Multivariable Calculus</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture. Multivariable calculus.
+        </p>
+      <h3>SDS 220 and SDS 100</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture with 1 credit lab. Intro to statistics and data science. Basic programming in R.
+        </p>
+        <h3>EDC 212 - Linguistics for Educators</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Introduction to linguistics and its role in education.
+        </p>
+      <h3>EGR 110 - Fundamental Engineering Principles</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Basic engineering principles. Final project was creating a circuit for a fire alarm that detects the absence of light.
+        </p>
+      <h3>MTH 112 - Calculus II</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Calculus II.
+        </p>
+     <h3>CSC 111 - Intro to Comp Sci Programming</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture with lab. Intro to programming in Python.
+        </p>
+      </div>
+      <div class="extracurricular">
+          <h3>Summer Internship at Park Lab, Harvard School of Public Health</h3>
+        <hr>
+        <p class="text">
+          Applied computational analysis of lung epithelial cells undergoing wound repair. Implemented ImageJ to segment nuclei; used MatLab to determine if size of nuclei increased closer to wound site and map their migration during wound healing. Used microscopy to take images of the nuclei to be used in ImageJ
+        </p>
+             <h3>Research in BioMedical Fields, Brown University (3 weeks)</h3>
+        <hr>
+        <p class="text">
+          Learned how to cast gels and proper lab technique. Learned protocol for Northern, Southern, and Western blots. Learned about electrophoresis. Wrote a ten-paged lab report for the final assignment.
+        </p>
+        </div>
+        <div class="coursework">
+          <h3>PHY 117 - Introductory Physics I</h3>
+        <hr>
+        <p class="text">
+          5 credit lecture with lab. Intro to physics.
+        </p>
+      <h3>EGR 100hh - Engineering for Everybody Human Health</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture with lab. Focus on the engineering design process. Final project was the architectural redesign of a local prison focusing on prisoner rehabilitation. Used AutoCad and laser cutting for modeling.
+        </p>
+      <h3>MTH 111</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture. Calculus I.
+        </p>   
+      <h3>CHM 111 - Chemistry I w/ Lab</h3>
+        <hr>
+        <p class="text">
+          4 credit lecture with 1 credit lab. General chemistry.
+        </p>
+        </div>
+        <div class="extracurricular">
+        <h3>BioMedical Engineering Course w/ Boston Leadership Institute (1 month)</h3>
+        <hr>
+        <img class="image image-wrap-text max-width-140" src="/images/bmeprosthetichand.png">
+       <p class="text">
+          Design and construction of a fully 3D printable prosthetic arm with the ability to provide mechanical feedback in response to palm stimulus.
+        </p><br><br><br><br><br>
+           <h3>Summer Course on Cryptography (2 weeks)</h3>
+        <hr>
+        <p class="text">
+          Learned how to code in C++. Intro to cryptography.
+        </p>
+        <h3>Girls Who Code (1 year)</h3>
+        <hr>
+        <p class="text">
+          Deep dive into MySQL and SQL. Understanding front end, back end, and connecting the three. Assisting computer science majors in college with homework.
+        </p>
+        <h3>Summer Course on Java progmaming (2 weeks)</h3>
+        <hr>
+        <p class="text">
+          Learned how to code in Java. Understanding the parts of code.
+        </p>
+        <h3>Summer Course on JavaScript progmaming (2 weeks)</h3>
+        <hr>
+        <p class="text">
+          Learned how to code in html, JavaScript, and css. Final project was recreating the game <em>Pong</em> in web browser.
+        </p>
+        <h3>Robotics Club in Highschool (3 years)</h3>
+        <hr>
+        <p class="text">
+          Assembly of robot to compete in FTC. Responsible for all CAD design and 3D printing.
+        </p>
+        </div>
+        <div class="coursework">
+          <h3>Honorable Highschool Mentions</h3>
+       <hr>
+        <p class="text">
+          AP Computer Science I - Learned programming in Java. Projects include 2D spaceship video game, chatbot, and class sorting algorithm using reproduction, evolution, and mutation
+          <br>AP Computer Science II - Learned progamming in Racket. Used Logisim to build a digital computer from logic gates.
+          BioTechnology (senior year advanced biology course) involving pipetting, PCR, etc.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-container"></div>
+</body>
+  <script>
+     function filterContent(type) {
+      const tabcontent = document.querySelectorAll(".tabcontent");
+      tabcontent.forEach(content => content.style.display = "none");
+
+      const coursework = document.querySelectorAll(".coursework");
+      const extracurricular = document.querySelectorAll(".extracurricular");
+      coursework.forEach(item => item.style.display = "none");
+      extracurricular.forEach(item => item.style.display = "none");
+
+      if (type === 'all') {
+        document.getElementById('All').style.display = "block";
+        coursework.forEach(item => item.style.display = "block");
+        extracurricular.forEach(item => item.style.display = "block");
+      } else if (type === 'coursework') {
+        document.getElementById('All').style.display = "block";
+        coursework.forEach(item => item.style.display = "block");
+      } else if (type === 'extracurricular') {
+        document.getElementById('All').style.display = "block";
+        extracurricular.forEach(item => item.style.display = "block");
+      }
+
+      var tabbuttons = document.querySelectorAll(".tab button");
+      tabbuttons.forEach(button => button.classList.remove("active"));
+      document.querySelector(`button[onclick="filterContent('${type}')"]`).classList.add("active");
+    }
+
+    document.getElementById("defaultOpen").click();
+  </script>
+</html>
