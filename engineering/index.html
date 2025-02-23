@@ -59,6 +59,15 @@
     .coursework, .extracurricular {
       display: none;
     }
+
+      .enlarge-image img {
+      transition: transform 0.3s ease;
+    }
+
+    .enlarge-image img:hover {
+      transform: scale(1.2);
+    }
+
   </style>
 </head>
 
@@ -244,7 +253,7 @@
         <div class="extracurricular">
         <h3>BioMedical Engineering Course w/ Boston Leadership Institute (1 month)</h3>
         <hr>
-        <img class="image image-wrap-text max-width-140" src="/images/engineering/bmeprosthetichand.png">
+        <img class="image image-wrap-text max-width-140 enlarge-image" src="/images/engineering/bmeprosthetichand.png">
        <p class="text" style="margin-bottom: 150px">
           Design and construction of a fully 3D printable prosthetic arm with the ability to provide mechanical feedback in response to palm stimulus.
         </p>
