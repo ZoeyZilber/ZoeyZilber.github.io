@@ -23,7 +23,7 @@
     }
 
    .previewer {
-       display: inline-block;
+       display: flex;
        justify-content: center;
        align-items: center;
        position: relative;
@@ -32,7 +32,7 @@
     .previewer img {
       object-fit: cover;
       transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-      opacity: 0.8;
+      opacity: 1;
     }
    .previewer .hover-text {
       position: absolute;
@@ -44,15 +44,17 @@
       font-size: 16px;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
     }
 
-    .previewer:hover .hover-text {
-      opacity: 1;
-    }
     .previewer img:hover {
-      transform: scale(1.1);
-    }
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
 
+    .previewer img:hover + .hover-text {
+    opacity: 1;
+}
     .modal {
       display: none;
       position: fixed;
