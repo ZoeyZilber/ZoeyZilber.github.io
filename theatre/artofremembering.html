@@ -22,8 +22,8 @@
       font-weight: 700 !important;
     }
 
-    .previewer {
-       display: flex;
+   .previewer {
+       display: inline-block;
        justify-content: center;
        align-items: center;
        position: relative;
@@ -31,14 +31,14 @@
     
     .previewer img {
       object-fit: cover;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 0.8;
     }
    .previewer .hover-text {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background: rgba(0, 0, 0, 0.7);
       color: white;
       padding: 10px;
       font-size: 16px;
@@ -166,7 +166,57 @@
   <script>
     var currentImageIndex = 0;
     var images = [
-                 "DSC03979-ARW_DxO_DeepPRIME.jpg", "DSC03997-ARW_DxO_DeepPRIME.jpg", "DSC04093-ARW_DxO_DeepPRIME.jpg", "DSC04100-ARW_DxO_DeepPRIME.jpg", "DSC04112-ARW_DxO_DeepPRIME.jpg", "DSC04136-ARW_DxO_DeepPRIME.jpg", "DSC04187-ARW_DxO_DeepPRIME.jpg", "DSC04210-ARW_DxO_DeepPRIME.jpg", "DSC04250-ARW_DxO_DeepPRIME.jpg", "DSC04254-ARW_DxO_DeepPRIME.jpg", "DSC04309-ARW_DxO_DeepPRIME.jpg", "DSC04319-ARW_DxO_DeepPRIME.jpg", "DSC04389-ARW_DxO_DeepPRIME.jpg", "DSC04420-ARW_DxO_DeepPRIME.jpg", "DSC04513-ARW_DxO_DeepPRIME.jpg", "DSC04616-ARW_DxO_DeepPRIME.jpg", "DSC04625-ARW_DxO_DeepPRIME.jpg", "DSC04656-ARW_DxO_DeepPRIME.jpg", "DSC04663-ARW_DxO_DeepPRIME.jpg", "DSC04734-ARW_DxO_DeepPRIME.jpg", "DSC04740-ARW_DxO_DeepPRIME.jpg", "DSC04747-ARW_DxO_DeepPRIME.jpg", "DSC04757-ARW_DxO_DeepPRIME.jpg", "DSC04857-ARW_DxO_DeepPRIME.jpg", "DSC04871-ARW_DxO_DeepPRIME.jpg", "DSC04890-ARW_DxO_DeepPRIME.jpg", "DSC04897-ARW_DxO_DeepPRIME.jpg", "DSC05002-ARW_DxO_DeepPRIME.jpg", "DSC05016-ARW_DxO_DeepPRIME.jpg", "DSC05092-ARW_DxO_DeepPRIME.jpg", "DSC05114-ARW_DxO_DeepPRIME.jpg", "DSC05174-ARW_DxO_DeepPRIME.jpg", "DSC05180-ARW_DxO_DeepPRIME.jpg", "DSC05181-ARW_DxO_DeepPRIME.jpg", "DSC05183-ARW_DxO_DeepPRIME.jpg", "DSC05192-ARW_DxO_DeepPRIME.jpg", "DSC05225-ARW_DxO_DeepPRIME.jpg", "DSC05240-ARW_DxO_DeepPRIME.jpg", "DSC05277-ARW_DxO_DeepPRIME.jpg", "DSC05285-ARW_DxO_DeepPRIME.jpg", "DSC05294-ARW_DxO_DeepPRIME.jpg", "DSC05296-ARW_DxO_DeepPRIME.jpg", "DSC05308-ARW_DxO_DeepPRIME.jpg", "DSC05440-ARW_DxO_DeepPRIME.jpg", "DSC05487-ARW_DxO_DeepPRIME-2.jpg", "DSC05540-ARW_DxO_DeepPRIME.jpg", "DSC05580-ARW_DxO_DeepPRIME.jpg", "DSC05605-ARW_DxO_DeepPRIME.jpg", "DSC05626-ARW_DxO_DeepPRIME.jpg", "DSC05639-ARW_DxO_DeepPRIME.jpg", "DSC05695-ARW_DxO_DeepPRIME.jpg"
+                 "/images/theatre/artofremembering/DSC03979-ARW_DxO_DeepPRIME.jpg", 
+                 "/images/theatre/artofremembering/DSC03997-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04093-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04100-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04112-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04136-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04187-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04210-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04250-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04254-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04309-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04319-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04389-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04420-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04513-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04616-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04625-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04656-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04663-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04734-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04740-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04747-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04757-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04857-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04871-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04890-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC04897-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05002-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05016-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05092-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05114-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05174-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05180-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05181-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05183-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05192-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05225-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05277-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05285-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05294-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05296-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05308-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05440-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05487-ARW_DxO_DeepPRIME-2.jpg", 
+                "/images/theatre/artofremembering/DSC05540-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05580-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05605-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05626-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05639-ARW_DxO_DeepPRIME.jpg", 
+                "/images/theatre/artofremembering/DSC05695-ARW_DxO_DeepPRIME.jpg"
                 ];
 
             function openModal(index) {
