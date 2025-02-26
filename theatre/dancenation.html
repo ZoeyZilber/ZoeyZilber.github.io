@@ -26,22 +26,34 @@
       overflow-x: hidden;
     }
 
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; 
-        gap: 10px;
+    .previewer {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
     }
-
-    .gallery img {
-      width: 200px;
-      height: 200px;
+    
+    .previewer img {
       object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.2s ease-in-out;
+      transition: transform 0.3s ease-in-out;
+    }
+   .previewer .hover-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
     }
 
-    .gallery img:hover {
+    .previewer:hover .hover-text {
+      opacity: 1;
+    }
+    .previewer img:hover {
       transform: scale(1.1);
     }
 
@@ -137,45 +149,9 @@
           <div class="flex-item flex-column">
             <h2 style="text-align:center">Dance Nation Smith College Theater Department 2023 Fall Production</h2>
             <p>Director Daniel Elihu Kramer, Choreographer Frankie Baron, Faculty designers Ed Check (Set) and Lara Dubin (Lighting), Rex Tans ’25 designed the costumes, Emma Scharf ’26 was the Sound Designer, and Sula Johnson ’26 was the Props Charge.<br>Photos Credit to Derek Fowles.</p>
-
-            <div class="gallery">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0011-min.JPG" alt="Image 1" onclick="openModal(1)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0021-min.JPG" alt="Image 2" onclick="openModal(2)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0023-min.JPG" alt="Image 3" onclick="openModal(3)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0025-min.JPG" alt="Image 4" onclick="openModal(4)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0026-min.JPG" alt="Image 5" onclick="openModal(5)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0028-min.JPG" alt="Image 6" onclick="openModal(6)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0036-min.JPG" alt="Image 7" onclick="openModal(7)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0071-min.JPG" alt="Image 8" onclick="openModal(8)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0085-min.JPG" alt="Image 9" onclick="openModal(9)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0130-min.JPG" alt="Image 10" onclick="openModal(10)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0179-min.JPG" alt="Image 11" onclick="openModal(11)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0192-min.JPG" alt="Image 12" onclick="openModal(12)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0197-min.JPG" alt="Image 13" onclick="openModal(13)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0201-min.JPG" alt="Image 14" onclick="openModal(14)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0238-min.JPG" alt="Image 15" onclick="openModal(15)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0536-min.JPG" alt="Image 16" onclick="openModal(16)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0583-min.JPG" alt="Image 17" onclick="openModal(17)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0599-min.JPG" alt="Image 18" onclick="openModal(18)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0604-min.JPG" alt="Image 19" onclick="openModal(19)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0609-min.JPG" alt="Image 20" onclick="openModal(20)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0611-min.JPG" alt="Image 21" onclick="openModal(21)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0623-min.JPG" alt="Image 22" onclick="openModal(22)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0626-min.JPG" alt="Image 23" onclick="openModal(23)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0629-min.JPG" alt="Image 24" onclick="openModal(24)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0633-min.JPG" alt="Image 25" onclick="openModal(25)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0635-min.JPG" alt="Image 26" onclick="openModal(26)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0637-min.JPG" alt="Image 27" onclick="openModal(27)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0654-min.JPG" alt="Image 28" onclick="openModal(28)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0726-min.JPG" alt="Image 29" onclick="openModal(29)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0741-min.JPG" alt="Image 30" onclick="openModal(30)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0829-min.JPG" alt="Image 31" onclick="openModal(31)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0971-min.JPG" alt="Image 32" onclick="openModal(32)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_0993-min.JPG" alt="Image 33" onclick="openModal(33)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_1032-min.JPG" alt="Image 34" onclick="openModal(34)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_1054-min.JPG" alt="Image 35" onclick="openModal(35)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_1055-min.JPG" alt="Image 36" onclick="openModal(36)">
-              <img src="\images\theatre\dancenation\thumbnails\DFP_1070-min.JPG" alt="Image 37" onclick="openModal(37)">
+           <div class="previewer">
+              <img width="500px" src="/images/theatre/dancenation/DFP_0026.JPG" alt="Image 1" onclick="openModal(1)"/></a>
+              <div class="hover-text">See More Images</div>
             </div>
           </div>
         </div>
