@@ -492,6 +492,8 @@ hr {
 .image-wrap-text {
   float: left;
   margin: 5px 40px 25px 0;
+  position: relative;
+  overflow: visible;
 }
 
 .image-caption {
@@ -1388,6 +1390,8 @@ ol.nested>li:before {
     max-width: 100%;
     margin-bottom: 20px;
     margin-right: 0;
+    position: relative;
+    overflow: visible;
   }
 }
 
