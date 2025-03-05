@@ -96,32 +96,10 @@ and even faster to type with than the inexpensive versions on the market.
         const light = new THREE.DirectionalLight(0xffffff, 1);
         light.position.set(1, 1, 1).normalize();
         scene.add(light);
-
-        const ambientLight = new THREE.AmbientLight(0x404040); 
-        scene.add(ambientLight);
-
-        animate();
-    }
-
-  <script>
-    let scene, camera, renderer, controls, mesh;
-
-    function init() {
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.set(0, 0, 100);
-
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('viewer').appendChild(renderer.domElement);
-
-        const light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(1, 1, 1).normalize();
-        scene.add(light);
         const ambientLight = new THREE.AmbientLight(0x404040);
         scene.add(ambientLight);
         animate();
-        loadSTLFromSrc('/path/to/your/model.stl');
+        loadSTLFromSrc('/src/projects/braillekeyboard/keycaps.stl');
     }
     function loadSTLFromSrc(src) {
         const loader = new THREE.STLLoader();
