@@ -1,4 +1,36 @@
+ .previewer {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       position: relative;
+    }
+    
+    .previewer img {
+      object-fit: cover;
+      transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      opacity: 1;
+    }
+   .previewer .hover-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      padding: 10px;
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      pointer-events: none;
+    }
 
+    .previewer img:hover {
+    transform: scale(1.1);
+    opacity: 0.6;
+  }
+
+    .previewer img:hover + .hover-text {
+    opacity: 1;
+}
 .custom-image-button {
   display: flex;
   flex-direction: column;
