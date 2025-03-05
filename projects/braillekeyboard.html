@@ -21,6 +21,11 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+      #viewer {
+      width: 100%;
+      height: 500px;
+      background-color: #f0f0f0;
+    }
   </style>
 </head>
 
@@ -55,6 +60,7 @@ keys in the 2x3 part of the keyboard. The final key I decided to add was a “re
 To help visualize how this would work, here is how you write the word “den” using my
 keyboard where the bolded “x”’s indicate which keys you would press for each letter.
             </p>
+            <div id="viewer"></div>
             <h2>Future Directions</h2>
             <hr>
             <p class="text">
@@ -75,6 +81,78 @@ and even faster to type with than the inexpensive versions on the market.
     </div>
   </div>
   <div class="footer-container"></div>
+  <script>
+    let scene, camera, renderer, controls, mesh;
+
+    function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 100);
+
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('viewer').appendChild(renderer.domElement);
+
+        const light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(1, 1, 1).normalize();
+        scene.add(light);
+
+        const ambientLight = new THREE.AmbientLight(0x404040); 
+        scene.add(ambientLight);
+
+        animate();
+    }
+
+  <script>
+    let scene, camera, renderer, controls, mesh;
+
+    function init() {
+        scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 100);
+
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('viewer').appendChild(renderer.domElement);
+
+        const light = new THREE.DirectionalLight(0xffffff, 1);
+        light.position.set(1, 1, 1).normalize();
+        scene.add(light);
+        const ambientLight = new THREE.AmbientLight(0x404040);
+        scene.add(ambientLight);
+        animate();
+        loadSTLFromSrc('/path/to/your/model.stl');
+    }
+    function loadSTLFromSrc(src) {
+        const loader = new THREE.STLLoader();
+        loader.load(src, function (geometry) {
+            if (mesh) {
+                scene.remove(mesh); 
+            }
+            const material = new THREE.MeshStandardMaterial({ color: 0x0077ff, metalness: 0.5, roughness: 0.1 });
+            mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+            mesh.rotation.x = -Math.PI / 2;
+            mesh.position.set(0, 0, 0);
+        }, undefined, function (error) {
+            console.error('Error loading STL model:', error);
+        });
+    }
+    function animate() {
+        requestAnimationFrame(animate);
+        if (mesh) {
+            mesh.rotation.y += 0.01;
+        }
+
+        renderer.render(scene, camera);
+    }
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+    init();
+  </script>
 </body>
 
 </html>
