@@ -494,8 +494,6 @@ hr {
 .image-wrap-text {
   float: left;
   margin: 5px 40px 25px 0;
-  position: relative;
-  overflow: visible;
 }
 
 .image-caption {
