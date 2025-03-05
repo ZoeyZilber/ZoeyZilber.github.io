@@ -60,10 +60,19 @@
       display: none;
     }
 
-      .image:hover {
-      transform: scale(1.2);
-      transition: transform 0.3s ease-in-out;
-  }
+     .image-wrap-text {
+  position: relative;
+  overflow: visible;
+}
+
+.image {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: center center;
+}
+
+.image:hover {
+  transform: scale(1.2);
+}
 
   </style>
 </head>
