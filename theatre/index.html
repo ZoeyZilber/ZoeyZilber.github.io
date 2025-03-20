@@ -190,6 +190,7 @@
       <h3>2024</h3>
       <p>Smith Theatre Department: 16th grade fall production of <em>Marie Antoinette</em>
       <br>Role: Production Electrician and Scene Shop Assistant</p>
+      <img width="300px" src="/src/images/theatre/marieantoinette.jpg" loading="lazy"/>
     </div>
   </div>
      </div>
@@ -394,6 +395,7 @@
       <h3>2022</h3>
       <p>Smith Theatre Department: 14th grade fall production of <em>Our Dear Dead Drug Lord</em>
       <br>Role: Electrician</p>
+      <img width="300px" src="/src/images/theatre/oddl.jpg" loading="lazy"/>
       </div>
     </div>
   </div>
@@ -412,6 +414,7 @@
       <h3>2022</h3>
       <p>Smith Theatre Department: 13th grade spring production of <em>Fun Home</em>
       <br>Role: Props</p>
+      <img id="randomImage" width="300px" loading="lazy" alt="Random Fun Home Image" />
       </div>
     </div>
   </div>
@@ -644,6 +647,20 @@
  }
 
  document.getElementById("defaultOpen").click();
+
+    <script>
+        const images = [
+            "/src/images/theatre/funhome/funhome1.jpg",
+            "/src/images/theatre/funhome/funhome2.jpg",
+            "/src/images/theatre/funhome/funhome3.jpg",
+            "/src/images/theatre/funhome/funhome4.jpg"
+        ];
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+        document.getElementById("randomImage").src = getRandomImage();
+    </script>
 </script>
 </html>
 
