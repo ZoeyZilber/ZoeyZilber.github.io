@@ -146,72 +146,54 @@
   </div>
   <div class="footer-container"></div>
 
-  <div id="myModal" class="modal">
+    <div id="myModal" class="modal">
     <span class="close" onclick="closeModal()">&times;</span>
     <div class="prev" onclick="changeImage(-1)">&#10094;</div>
-    <img class="modal-content" id="modalImage" aria-label="placeholder">
+    <img class="modal-content" id="modalImage">
     <div class="next" onclick="changeImage(1)">&#10095;</div>
-
-    <div class="bottom-text">
-      <div class="image-number" id="imageNumber"></div>
-      <div class="caption" id="imageCaption"></div>
-    </div>
   </div>
 
   <script>
     var currentImageIndex = 0;
     var images = [
-                 { src: "/src/images/theatre/artofremembering/DSC03979-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                 { src: "/src/images/theatre/artofremembering/DSC03997-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04093-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04100-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04112-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04136-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04187-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04210-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04250-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04254-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04309-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04319-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04389-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04420-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04513-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04616-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04625-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04656-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04663-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04734-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04740-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04747-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04757-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04857-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04871-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04890-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC04897-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05002-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05016-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05092-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05114-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05174-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05180-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05181-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05183-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05192-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05225-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05277-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05285-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05294-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05296-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05308-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05440-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05487-ARW_DxO_DeepPRIME-2.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05540-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05580-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05605-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05626-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05639-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }, 
-                { src: "/src/images/theatre/artofremembering/DSC05695-ARW_DxO_DeepPRIME.jpg", label: "Rehearsal of dramatic scene 1" }
+                  "/src/images/theatre/dancenation/DFP_0011.JPG",
+                  "/src/images/theatre/dancenation/DFP_0021.JPG",
+                  "/src/images/theatre/dancenation/DFP_0023.JPG",
+                  "/src/images/theatre/dancenation/DFP_0025.JPG",
+                  "/src/images/theatre/dancenation/DFP_0028.JPG",
+                  "/src/images/theatre/dancenation/DFP_0036.JPG",
+                  "/src/images/theatre/dancenation/DFP_0071.JPG",
+                  "/src/images/theatre/dancenation/DFP_0085.JPG",
+                  "/src/images/theatre/dancenation/DFP_0130.JPG",
+                  "/src/images/theatre/dancenation/DFP_0179.JPG",
+                  "/src/images/theatre/dancenation/DFP_0192.JPG",
+                  "/src/images/theatre/dancenation/DFP_0197.JPG",
+                  "/src/images/theatre/dancenation/DFP_0201.JPG",
+                  "/src/images/theatre/dancenation/DFP_0238.JPG",
+                  "/src/images/theatre/dancenation/DFP_0321.JPG",
+                  "/src/images/theatre/dancenation/DFP_0411.JPG",
+                  "/src/images/theatre/dancenation/DFP_0536.JPG",
+                  "/src/images/theatre/dancenation/DFP_0583.JPG",
+                  "/src/images/theatre/dancenation/DFP_0599.JPG",
+                  "/src/images/theatre/dancenation/DFP_0604.JPG",
+                  "/src/images/theatre/dancenation/DFP_0609.JPG",
+                  "/src/images/theatre/dancenation/DFP_0611.JPG",
+                  "/src/images/theatre/dancenation/DFP_0623.JPG",
+                  "/src/images/theatre/dancenation/DFP_0626.JPG",
+                  "/src/images/theatre/dancenation/DFP_0629.JPG",
+                  "/src/images/theatre/dancenation/DFP_0633.JPG",
+                  "/src/images/theatre/dancenation/DFP_0635.JPG",
+                  "/src/images/theatre/dancenation/DFP_0637.JPG",
+                  "/src/images/theatre/dancenation/DFP_0654.JPG",
+                  "/src/images/theatre/dancenation/DFP_0726.JPG",
+                  "/src/images/theatre/dancenation/DFP_0741.JPG",
+                  "/src/images/theatre/dancenation/DFP_0829.JPG",
+                  "/src/images/theatre/dancenation/DFP_0971.JPG",
+                  "/src/images/theatre/dancenation/DFP_0993.JPG",
+                  "/src/images/theatre/dancenation/DFP_1032.JPG",
+                  "/src/images/theatre/dancenation/DFP_1054.JPG",
+                  "/src/images/theatre/dancenation/DFP_1055.JPG",
+                  "/src/images/theatre/dancenation/DFP_1070.JPG"
                 ];
 
             function openModal(index) {
@@ -238,13 +220,7 @@
 
             function showImage() {
               var modalImage = document.getElementById('modalImage');
-              var imageNumber = document.getElementById('imageNumber');
-              var imageCaption = document.getElementById('imageCaption');
-              var currentImage = document.querySelectorAll('img')[currentImageIndex];
-
               modalImage.src = images[currentImageIndex];
-              imageNumber.textContent = `Image ${currentImageIndex + 1} of ${images.length}`;
-              imageCaption.textContent = currentImage.getAttribute('aria-label');
             }
 
             window.onclick = function(event) {
