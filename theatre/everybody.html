@@ -21,6 +21,13 @@
       opacity: 1 !important;
       font-weight: 700 !important;
     }
+    
+    .previewer {
+      display: flex;
+      justify-content: center;
+      align-items: center;     
+      width: 100%;             
+    }
 
     .modal {
       display: none;
@@ -135,7 +142,7 @@
             <h2 style="text-align:center">Everybody Smith College Theater Department 2024 Spring Production</h2>
             <p>Directed by Kim Stauffer. Set designer Alina Tschumakow ’26, lighting designer Via Sussman ’26, faculty costume designer Kiki Smith, sound designer Zoey Zilber '25, props by Tamarin Camp ’25, and stage managed by Elie Berman ’25. Photo Credits: Derek Fowles.</p>
             <div class="previewer">
-              <img width="500px" src="/src/images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg" alt="Image 1" onclick="openModal(1)" style="justify-content: center; align-items: center"/></a>
+              <img width="500px" src="/src/images/theatre/artofremembering/DSC05240-ARW_DxO_DeepPRIME.jpg" alt="Image 1" onclick="openModal(1)" style="display: flex;; justify-content: center; align-items: center;"/></a>
               <div class="hover-text">See More Images</div>
             </div>
           </div>
@@ -155,27 +162,27 @@
   <script>
     var currentImageIndex = 0;
     var images = [
-                 "/src/images/theatre/artoftremembering/DFP_0018.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0019.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0026.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0056.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0130.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0152.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0199.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0252.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0267.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0310.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0324.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0327.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0337.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0387.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0402.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0405.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0410.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0451.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0466.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0467.JPG",
-                  "/src/images/theatre/artoftremembering/DFP_0494.JPG"
+                 "/src/images/theatre/everybody/DFP_0018.JPG",
+                  "/src/images/theatre/everybody/DFP_0019.JPG",
+                  "/src/images/theatre/everybody/DFP_0026.JPG",
+                  "/src/images/theatre/everybody/DFP_0056.JPG",
+                  "/src/images/theatre/everybody/DFP_0130.JPG",
+                  "/src/images/theatre/everybody/DFP_0152.JPG",
+                  "/src/images/theatre/everybody/DFP_0199.JPG",
+                  "/src/images/theatre/everybody/DFP_0252.JPG",
+                  "/src/images/theatre/everybody/DFP_0267.JPG",
+                  "/src/images/theatre/everybody/DFP_0310.JPG",
+                  "/src/images/theatre/everybody/DFP_0324.JPG",
+                  "/src/images/theatre/everybody/DFP_0327.JPG",
+                  "/src/images/theatre/everybody/DFP_0337.JPG",
+                  "/src/images/theatre/everybody/DFP_0387.JPG",
+                  "/src/images/theatre/everybody/DFP_0402.JPG",
+                  "/src/images/theatre/everybody/DFP_0405.JPG",
+                  "/src/images/theatre/everybody/DFP_0410.JPG",
+                  "/src/images/theatre/everybody/DFP_0451.JPG",
+                  "/src/images/theatre/everybody/DFP_0466.JPG",
+                  "/src/images/theatre/everybody/DFP_0467.JPG",
+                  "/src/images/theatre/everybody/DFP_0494.JPG"
                 ];
 
             function openModal(index) {
