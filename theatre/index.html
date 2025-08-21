@@ -169,41 +169,38 @@ ul li:hover span:nth-child(1) {
   <div class="content-container">
     <div class = "content">
       <h2>Sort by</h2>
-       <ul><li><a href="#">
+       <ul><li><a href="#" class="context">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span>Context</span>
         </a></li></ul>
-      <ul><li><a href="#">
+      <ul><li><a href="#" class="department">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span>Department</span>
         </a></li></ul>
-      <ul><li><a href="#">
+      <ul><li><a href="#" class="genre">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span>Genre</span>
         </a></li></ul>
-      <ul><li><a href="#">
+      <ul><li><a href="#" class="facility">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             <span>Facility</span>
         </a></li></ul>
-  <div class="tab">
-        <button class="tablinks" onclick="filterContent('all')" id="defaultOpen">All</button>
-        <button class="tablinks" onclick="filterContent('lighting')">Lighting</button>
-        <button class="tablinks" onclick="filterContent('sound')">Sound</button>
-        <button class="tablinks" onclick="filterContent('setprops')">Set/Props</button>
-        <button class="tablinks" onclick="filterContent('coursework')">Coursework</button>
-  </div>
+      <div class="tabcontent coursework">Content for Context</div>
+      <div class="tabcontent extracurricular">Content for Department</div>
+      <div class="tabcontent genre">Content for Genre</div>
+      <div class="tabcontent facility">Content for Facility</div>
 
 <div id="All" class="tabcontent">
   <h2>Featured Theatre Work</h2>
@@ -721,46 +718,19 @@ ul li:hover span:nth-child(1) {
   </div>
 </body>
 <script>
-  function filterContent(type) {
-   const tabcontent = document.querySelectorAll(".tabcontent");
-   tabcontent.forEach(content => content.style.display = "none");
+    $(document).ready(function() {
+      // When a menu item is clicked
+      $('ul li a').click(function(event) {
+        event.preventDefault(); // Prevent the default anchor behavior
 
-   const lighting = document.querySelectorAll(".lighting");
-   const sound = document.querySelectorAll(".sound");
-   const setprops = document.querySelectorAll(".setprops");
-   const coursework = document.querySelectorAll(".coursework");
-   lighting.forEach(item => item.style.display = "none");
-   sound.forEach(item => item.style.display = "none");
-   setprops.forEach(item => item.style.display = "none");
-   coursework.forEach(item => item.style.display = "none");
+        // Remove active class from all tabs and hide them
+        $('.tabcontent').hide();
 
-   if (type === 'all') {
-     document.getElementById('All').style.display = "block";
-     lighting.forEach(item => item.style.display = "block");
-     sound.forEach(item => item.style.display = "block");
-     setprops.forEach(item => item.style.display = "block");
-     coursework.forEach(item => item.style.display = "block");
-   } else if (type === 'lighting') {
-     document.getElementById('All').style.display = "block";
-     lighting.forEach(item => item.style.display = "block");
-   } else if (type === 'sound') {
-     document.getElementById('All').style.display = "block";
-     sound.forEach(item => item.style.display = "block");
-   }else if (type === 'setprops') {
-     document.getElementById('All').style.display = "block";
-     setprops.forEach(item => item.style.display = "block");
-   }else if (type === 'coursework') {
-     document.getElementById('All').style.display = "block";
-     coursework.forEach(item => item.style.display = "block");
-     lighting.forEach(item => item.style.display = "none");
-     sound.forEach(item => item.style.display = "none");
-     setprops.forEach(item => item.style.display = "none");
-   }
-   
-   var tabbuttons = document.querySelectorAll(".tab button");
-   tabbuttons.forEach(button => button.classList.remove("active"));
-   document.querySelector(`button[onclick="filterContent('${type}')"]`).classList.add("active");
- }
+        // Add active class and show the relevant content based on the clicked link
+        var targetClass = $(this).attr('class');
+        $('.' + targetClass).show();
+      });
+    });
 
  document.getElementById("defaultOpen").click();
   
