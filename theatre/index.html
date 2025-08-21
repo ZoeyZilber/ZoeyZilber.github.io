@@ -42,6 +42,9 @@
   padding: 10px 40px;
   position: relative;
   width: 40%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
 .container::after {
@@ -87,9 +90,12 @@
   }
   
   .container {
-  width: 100%;
-  padding-left: 50px;
-  padding-right: 25px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 
   .left::after, .right::after {
@@ -110,6 +116,19 @@ ul {
   margin: 0;
   padding: 0;
   display: flex;
+}
+
+    li {
+  display: inline-block;
+}
+
+    a {
+  display: flex;
+  align-items: center;
+}
+
+    a span {
+  margin: 2px;
 }
 
 ul li {
