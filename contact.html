@@ -243,33 +243,6 @@
     }
   }
 }
-
-html {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
-
-* {
-  box-sizing: inherit;
-  &:before,
-  &:after {
-    box-sizing: inherit;
-  }
-}
-
-body {
-  overflow: hidden;
-  min-height: 100vh;
-  font-family: 'Inter';
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #362A89;
-  .twitter {
-    position: fixed;
-    display: block;
-    right: 24px;
-    bottom: 20px;
     svg {
       width: 24px;
       height: 24px;
@@ -311,11 +284,11 @@ body {
             <hr>
             <form action="https://formspree.io/f/mrgnavrk" method="POST">
               <label for="fname">First name:</label><br>
-              <input type="text" id="fname" name="fname" placeholder="John"><br>
+              <input type="text" id="fname" name="fname" placeholder="John" required><br>
               <label for="lname">Last name:</label><br>
-              <input type="text" id="lname" name="lname" placeholder="Doe"><br>
+              <input type="text" id="lname" name="lname" placeholder="Doe" required><br>
               <label>Your email:</label><br>
-              <input type="email" name="email" placeholder="johndoe@gmail.com"><br>
+              <input type="email" name="email" placeholder="johndoe@gmail.com" required><br>
               <label>Your message:</textarea></label><br>
               <textarea name="message" placeholder="[Insert message here]" style="height: 80px; width: 177px;"></textarea><br>
               <button class="button">
