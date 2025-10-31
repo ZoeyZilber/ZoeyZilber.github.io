@@ -25,6 +25,13 @@
     .coursework, .extracurricular {
       display: none;
     }
+.tab {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
 
      .image-wrap-text {
   position: relative;
@@ -92,18 +99,10 @@
   <div class="content-container">
     <div class="content">
       <div class="tab">
-         <span><div class="tablinks" onclick="filterContent('all')" id="defaultOpen">
-    All
-  </div><div class="tablinks" onclick="filterContent('coursework')">
- Coursework
-  </div><div class="tablinks" onclick="filterContent('extracurricular')">
-    Extracurricular
-  </div></span>
-        <button >All</button>
-        <button >Coursework</button>
-        <button >Extracurricular</button>
-      </div>
-
+  <div class="tablinks" onclick="filterContent('all')" id="defaultOpen">All</div>
+  <div class="tablinks" onclick="filterContent('coursework')">Coursework</div>
+  <div class="tablinks" onclick="filterContent('extracurricular')">Extracurricular</div>
+</div>
       <div id="All" class="tabcontent">
          <h2>Featured Engineering Work</h2>
             <hr>
