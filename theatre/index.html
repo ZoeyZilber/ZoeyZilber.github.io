@@ -180,6 +180,11 @@ ul li:hover span:nth-child(1) {
   transform: translate(0, 0);
   opacity: 0.2;
 }
+    ul li span:last-child {
+  font-size: 16px !important;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
     svg {
     width: 80%;
     height: auto;
@@ -237,17 +242,17 @@ ul li:hover span:nth-child(1) {
       <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
   <rect id="bg" width="800" height="600" fill="#b3b3b3"/>
 
-  <g class="icon" id="camera">
+  <g class="icon" id="featured">
     <rect x="255" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
     <text x="305" y="308" text-anchor="middle" font-size="18">Featured</text>
   </g>
 
-  <g class="icon" id="clip">
+  <g class="icon" id="resume">
     <rect x="375" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
     <text x="425" y="308" text-anchor="middle" font-size="18">Resume</text>
   </g>
 
-  <g class="icon" id="plane">
+  <g class="icon" id="timeline">
     <rect x="495" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
     <text x="545" y="308" text-anchor="middle" font-size="18">Timeline</text>
   </g>
@@ -768,6 +773,8 @@ ul li:hover span:nth-child(1) {
   </div>
 </body>
 <script>
+  window.addEventListener('load', () => {
+  allIconButtons[0].dispatchEvent(new Event('click'));
 const select = s => document.querySelector(s),
       selectAll = s => document.querySelectorAll(s),
       mainSVG = select('#mainSVG'),
