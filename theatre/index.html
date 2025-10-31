@@ -234,6 +234,16 @@ ul li:hover span:nth-child(1) {
   transform: scale(0.1, 1);
 }
 
+    svg {
+    width: 80%;
+    height: auto;
+    visibility: hidden;
+  }
+
+  .icon {
+    cursor: pointer;
+  }
+
 </style>
 </head>
 
@@ -283,6 +293,35 @@ ul li:hover span:nth-child(1) {
       <div class="tabcontent department">Content for Department</div>
       <div class="tabcontent genre">Content for Genre</div>
       <div class="tabcontent facility">Content for Facility</div>
+
+      <svg id="mainSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect id="bg" width="800" height="600" fill="#b3b3b3"/>
+
+  <g class="icon" id="camera">
+    <rect x="255" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
+    <text x="305" y="308" text-anchor="middle" font-size="18">Camera</text>
+  </g>
+
+  <g class="icon" id="clip">
+    <rect x="375" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
+    <text x="425" y="308" text-anchor="middle" font-size="18">Clip</text>
+  </g>
+
+  <g class="icon" id="plane">
+    <rect x="495" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
+    <text x="545" y="308" text-anchor="middle" font-size="18">Plane</text>
+  </g>
+
+  <g class="icon" id="pin">
+    <rect x="615" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
+    <text x="665" y="308" text-anchor="middle" font-size="18">Pin</text>
+  </g>
+
+  <g class="icon" id="cog">
+    <rect x="735" y="275" width="100" height="50" rx="25" ry="25" fill="#fff"/>
+    <text x="785" y="308" text-anchor="middle" font-size="18">Settings</text>
+  </g>
+</svg>
 
 <div id="All" class="tabcontent">
   <h2>Featured Theatre Work</h2>
@@ -800,33 +839,70 @@ ul li:hover span:nth-child(1) {
   </div>
 </body>
 <script>
-    $(document).ready(function() {
-      // When a menu item is clicked
-      $('ul li a').click(function(event) {
-        event.preventDefault(); // Prevent the default anchor behavior
+const select = s => document.querySelector(s),
+      selectAll = s => document.querySelectorAll(s),
+      mainSVG = select('#mainSVG'),
+      bg = select('#bg'),
+      allIconButtons = gsap.utils.toArray('.icon'),
+      allRects = gsap.utils.toArray('.icon rect'),
+      allTexts = gsap.utils.toArray('.icon text'),
+      colorArr = [
+        {bg: '#FFCC02', accent:'#F6BB02'},
+        {bg: '#22CC88', accent:'#21B77A'},
+        {bg: '#0099FF', accent:'#018AE6'},
+        {bg: '#FF3366', accent:'#C0284D'},
+        {bg: '#8849D4', accent:'#6F2DBD'}
+      ];
 
-        // Remove active class from all tabs and hide them
-        $('.tabcontent').hide();
+gsap.set('svg', { visibility: 'visible' });
 
-        // Add active class and show the relevant content based on the clicked link
-        var targetClass = $(this).attr('class');
-        $('.' + targetClass).show();
-      });
-    });
+gsap.from(allIconButtons, {
+  delay: 0.5,
+  duration: 0.75,	
+  transformOrigin: '50% 50%',
+  scale: 0,
+  stagger: { each: 0.04 },
+  ease: 'elastic(0.4, 0.4)'
+});
 
- document.getElementById("defaultOpen").click();
-  
-        const images = [
-            "/src/images/theatre/funhome/funhome1.jpg",
-            "/src/images/theatre/funhome/funhome2.jpg",
-            "/src/images/theatre/funhome/funhome3.jpg",
-            "/src/images/theatre/funhome/funhome4.jpg"
-        ];
-        function getRandomImage() {
-            const randomIndex = Math.floor(Math.random() * images.length);
-            return images[randomIndex];
-        }
-        document.getElementById("randomImage").src = getRandomImage();
+function clickIcon(e) {
+  let tl = gsap.timeline({ defaults: { ease: 'elastic(0.4, 0.4)' } });	
+  let iconId = Number(e.currentTarget.getAttribute('data-iconId'));
+
+  if(iconId === -1) {
+    tl.to('body', { backgroundColor:'#b3b3b3' })
+      .to(allTexts, { fill:'#b3b3b3', scale: 1 }, 0)
+      .to(allIconButtons, { x: 0 }, 0)
+      .to(allRects, {
+        attr: { width: 100 },
+        fill: '#FFF',
+        x: 0
+      }, 0)
+      .to('#bg', { fill: '#b3b3b3' }, 0);
+    return;
+  }
+
+  tl.to(allIconButtons, {
+    x: (i) => (i <= iconId) ? 0 : 50
+  })
+  .to(allRects, {
+    attr: { width: (i) => (i === iconId ? 130 : 100) },
+    fill: (i) => (i === iconId ? colorArr[iconId].accent : '#FFF')
+  }, 0)
+  .to(allTexts, {
+    fill: (i) => (i === iconId ? '#FFF' : '#b3b3b3'),
+    scale: (i) => (i === iconId ? 1.2 : 1)
+  }, 0)
+  .to('body', { backgroundColor: colorArr[iconId].bg }, 0)
+  .to('#bg', { fill: colorArr[iconId].bg }, 0);
+}
+
+allIconButtons.forEach((target, i) => {
+  target.setAttribute('data-iconId', i);
+  target.addEventListener('click', clickIcon);
+});
+
+bg.setAttribute('data-iconId', -1);
 </script>
 </html>
 
