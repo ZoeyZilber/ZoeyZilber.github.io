@@ -119,13 +119,14 @@
       document.querySelector(`.tablinks[data-type="${type}"]`).classList.add('active');
     }
 
-    document.querySelectorAll('.tablinks').forEach(btn => {
-      btn.addEventListener('click', () => filterContent(btn.dataset.type));
-    });
+  window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tablinks').forEach(btn => {
+    btn.addEventListener('click', () => filterContent(btn.dataset.type));
+  });
 
-    window.addEventListener('DOMContentLoaded', () => {
-      filterContent('all');
-    });
+  filterContent('all');
+});
+
   </script>
 </body>
 </html>
