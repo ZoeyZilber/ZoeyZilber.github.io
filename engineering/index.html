@@ -85,10 +85,10 @@
     <div class="content">
 
       <div class="tab">
-        <div class="tablinks active" data-type="all" id="defaultOpen">All</div>
-        <div class="tablinks" data-type="coursework">Coursework</div>
-        <div class="tablinks" data-type="extracurricular">Extracurricular</div>
-      </div>
+  <div class="tablinks active" data-type="all" id="defaultOpen">All</div>
+  <div class="tablinks" data-type="coursework">Coursework</div>
+  <div class="tablinks" data-type="extracurricular">Extracurricular</div>
+</div>
 
       <div id="All" class="tabcontent">
         <div class="tablinks" onclick="filterContent('extracurricular')">Extracurricular</div>
@@ -322,33 +322,36 @@
   <div class="footer-container"></div>
 
   <script>
-    function filterContent(type) {
-      const coursework = document.querySelectorAll(".coursework");
-      const extracurricular = document.querySelectorAll(".extracurricular");
-      coursework.forEach(el => el.style.display = "none");
-      extracurricular.forEach(el => el.style.display = "none");
+function filterContent(type) {
+  const coursework = document.querySelectorAll(".coursework");
+  const extracurricular = document.querySelectorAll(".extracurricular");
 
-      if (type === 'all') {
-        coursework.forEach(el => el.style.display = "block");
-        extracurricular.forEach(el => el.style.display = "block");
-      } else if (type === 'coursework') {
-        coursework.forEach(el => el.style.display = "block");
-      } else if (type === 'extracurricular') {
-        extracurricular.forEach(el => el.style.display = "block");
-      }
+  coursework.forEach(el => el.style.display = "none");
+  extracurricular.forEach(el => el.style.display = "none");
 
-      document.querySelectorAll('.tablinks').forEach(btn => btn.classList.remove('active'));
-      document.querySelector(`.tablinks[data-type="${type}"]`).classList.add('active');
-    }
+  if (type === 'all') {
+    coursework.forEach(el => el.style.display = "block");
+    extracurricular.forEach(el => el.style.display = "block");
+  } else if (type === 'coursework') {
+    coursework.forEach(el => el.style.display = "block");
+  } else if (type === 'extracurricular') {
+    extracurricular.forEach(el => el.style.display = "block");
+  }
 
-  window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tablinks').forEach(btn => btn.classList.remove('active'));
+  const activeBtn = document.querySelector(`.tablinks[data-type="${type}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+}
+
+window.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.tablinks').forEach(btn => {
     btn.addEventListener('click', () => filterContent(btn.dataset.type));
   });
 
+  // Default state = show everything
   filterContent('all');
 });
+</script>
 
-  </script>
 </body>
 </html>
